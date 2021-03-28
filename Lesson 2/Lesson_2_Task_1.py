@@ -1,3 +1,4 @@
+# Lesson 2 task 1
 
 apple_number = int(input('Enter the number of apples: '))
 students_number = int(input('Enter the number of students: '))
