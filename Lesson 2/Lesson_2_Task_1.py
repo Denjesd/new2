@@ -1,9 +1,8 @@
 # Lesson 2 task 1
 
-
-
 apple_number = int(input('Enter the number of apples: '))
 students_number = int(input('Enter the number of students: '))
+
 if apple_number < students_number:
       while apple_number < students_number:
             print('\nSorry, some student does not get any apple\n'
