@@ -8,7 +8,7 @@ while input_number <= 0:
 
 power_of_two = 0
 current_value = 1
-while (current_value * 2) < input_number:
+while (current_value * 2) <= input_number:
     power_of_two += 1
     current_value *= 2
 
