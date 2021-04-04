@@ -3,7 +3,7 @@
 input_string = 'ejefv kowek pmefpqd iutjwdcv jekv a b ce d prge'
 upper_char = input('Enter the symbol you want to capitalize (except the first and the last): ')
 while len(upper_char) > 1:
-        upper_char = input('Please, enter only one symbol: ')
+    upper_char = input('Please, enter only one symbol: ')
 print(f'Input string is: \'{input_string}\'.')
 if input_string.find(upper_char) == -1:
     print('Sorry, we did not found symbol in input string.')
