@@ -5,12 +5,14 @@ upper_char = input('Enter the symbol you want to capitalize (except the first an
 while len(upper_char) > 1:
     upper_char = input('Please, enter only one symbol: ')
 print(f'Input string is: \'{input_string}\'.')
-if input_string.find(upper_char) == -1:
+
+first_meeting = input_string.find(upper_char)
+
+if first_meeting == -1:
     print('Sorry, we did not found symbol in input string.')
 else:
 
-    first_meeting = input_string.find(f'{upper_char}')
-    last_meeting = input_string.rfind(f'{upper_char}')
+    last_meeting = input_string.rfind(upper_char)
 
     first_part = input_string[:first_meeting + 1]
     last_part = input_string[last_meeting:]
