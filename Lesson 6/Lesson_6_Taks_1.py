@@ -1,6 +1,6 @@
 # Lesson 6 Task 1
 
-exept_symbols = ('.', ',', '!', '?', ';', ':', '\'', '(', ')', '\"')
+except_symbols = ('.', ',', '!', '?', ';', ':', '\'', '(', ')', '\"')
 input_words = open('Lesson_6_1.txt').read().lower().split()
 dict_words = {}
 
@@ -9,13 +9,13 @@ for word in range(len(input_words)):
 
     index = 0
     while index < len(listed_word):
-        if listed_word[index] in exept_symbols:
+        if listed_word[index] in except_symbols:
             listed_word.pop(index)
         else:
             index += 1
 
     word_to_dict = ''.join([elem for elem in listed_word])
-    if dict_words.get(word_to_dict) == None:
+    if dict_words.get(word_to_dict) is None:
 
         dict_words[word_to_dict] = 1
     else:
