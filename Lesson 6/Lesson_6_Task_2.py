@@ -1,4 +1,4 @@
-# Lesson 6 Task 1
+# Lesson 6 Task 2
 
 except_symbols = ('.', ',', '!', '?', ';', ':', '\'', '(', ')', '\"')
 input_words = open('Lesson_6_1.txt').read().lower().split()
@@ -25,7 +25,7 @@ for word in range(len(input_words)):
             max_word_appearence[0] = word_to_dict
             max_word_appearence[1] = dict_words.get(word_to_dict)
 
-for word in dict_words:
-    print(word, dict_words.get(word))
+for key, value in dict_words.items():
+    print(key,':', value)
 print(f'The most frequent word is \'{max_word_appearence[0]}\''
       f' with {max_word_appearence[1]} times appearence.')
