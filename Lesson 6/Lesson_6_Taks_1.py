@@ -21,5 +21,5 @@ for word in range(len(input_words)):
     else:
         dict_words[word_to_dict] += 1
 
-for word in dict_words:
-    print(word, dict_words.get(word))
+for key, value in dict_words.items():
+    print(key,':', value)
