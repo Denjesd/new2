@@ -11,7 +11,6 @@ print('Our new list is:', list(map(lambda item: (
                                                             [98762, 'Programming Python, Mark Lutz', 5, 56.80],
                                                             [77226, 'Head First Python, Paul Barry', 3, 32.95],
                                                             [88112, 'Einfuhrung in Python3, Bernd Klein', 3, 24.99],
-                                                            [88115, 'Einfuhrung in Python4, Bernd Klein', 2, 50]
                                                         ]
                                     )
                                 )
