@@ -8,10 +8,11 @@ input_list = [
 
 print('Our new list is:', list(map(lambda item: (
                                     item[0],
-                                    (round(item[2] * item[3]
+                                    round(item[2] * item[3]
                                         if item[2] * item[3] >= 100
                                         else
-                                            item[2] * item[3] + 10, 2))),
+                                            item[2] * item[3] + 10, 2)
+                                                ),
                                     input_list
                                     )
                                 )
