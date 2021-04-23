@@ -30,25 +30,17 @@ def draw_lower_triangle(triangle, triangle_height):
 
 def paint_upper_triangle(triangle, triangle_height):
     for i in range(1, triangle_height - 1):
-        for j in range(triangle[i].index('*') + 1, triangle_height * 2):
-            if triangle[i][j+1] == ' ':
-                triangle[i][j] = '*'
-            else:
-                triangle[i][j] = '*'
-                break
+        for j in range(triangle[i].index('*') + 1, len(triangle[i]) - triangle[i].index('*') - 1):
+            triangle[i][j] = '*'
     show_triangle(triangle)
 
 def paint_lover_triangle(triangle, triangle_height):
     if len(triangle) < triangle_height * 2 - 1:
         print('There is no lower tringle.')
     else:
-        for i in range(triangle_height, triangle_height * 2 - 2):
-            for j in range(triangle[i].index('*') + 1, triangle_height * 2):
-                if triangle[i][j + 1] == ' ':
-                    triangle[i][j] = '*'
-                else:
-                    triangle[i][j] = '*'
-                    break
+        for i in range(triangle_height, triangle_height * 2 - 1):
+            for j in range(triangle[i].index('*') + 1, len(triangle[i]) - triangle[i].index('*') - 1):
+                triangle[i][j] = '*'
         show_triangle(triangle)
 
 def draw_vertical_diagonal(triangle, triangle_height):
@@ -65,11 +57,8 @@ def draw_horizontal_diagonal(triangle):
 
 def clear_upper_triangle(triangle, triangle_height):
     for i in range(1, triangle_height - 1):
-        for j in range(triangle[i].index('*') + 1, triangle_height * 2):
-            if triangle[i][j + 1] == '*':
+        for j in range(triangle[i].index('*') + 1, len(triangle[i]) - triangle[i].index('*') - 1):
                 triangle[i][j] = ' '
-            else:
-                break
     show_triangle(triangle)
 
 def clear_lower_triangle(triangle, triangle_height):
@@ -77,12 +66,9 @@ def clear_lower_triangle(triangle, triangle_height):
     if len(triangle) < triangle_height * 2 - 1:
         print('There is no lower tringle.')
     else:
-        for i in range(triangle_height, triangle_height * 2 - 2):
-            for j in range(triangle[i].index('*') + 1, triangle_height * 2):
-                if triangle[i][j + 1] == '*':
-                    triangle[i][j] = ' '
-                else:
-                    break
+        for i in range(triangle_height, triangle_height * 2 - 1):
+            for j in range(triangle[i].index('*') + 1, len(triangle[i]) - triangle[i].index('*') - 1):
+                triangle[i][j] = ' '
         show_triangle(triangle)
 
 def clear_vertical_diagonal(triangle, triangle_height):
