@@ -48,7 +48,7 @@ while command != 'q':
     if command == 'cut':
         clear_upper_triangle(actual_triangle, triangle_height)
     if command == 'clt':
-        clear_lower_triangle(actual_triangle)
+        clear_lower_triangle(actual_triangle, triangle_height)
     if command == 'cvd':
         clear_vertical_diagonal(actual_triangle, triangle_height)
     if command == 'chd':
