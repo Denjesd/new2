@@ -46,9 +46,12 @@ def matrix_sort(array, column_sum_list):                                #Columns
                     break
 
 
-
-matrix_size = 5
+matrix_size = int(input('Enter the size of the matrix (size >= 5): '))
+while matrix_size < 5:
+    matrix_size = int(input('Value is < 5.\nEnter another size of the matrix (size >= 5: '))
 matrix = [[random.randint(1, 50) for _ in range(matrix_size)] for _ in range(matrix_size)]
+
+
 # matrix = [
 #     [10, 50, 10, 50, 10],
 #     [20, 40, 20, 40, 20],
