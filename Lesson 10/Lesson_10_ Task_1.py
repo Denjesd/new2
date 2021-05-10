@@ -7,10 +7,6 @@ def show_matrix(matrix, column_sum_list):
           print(''.join('{item:>4}'.format(item=x) for x in line))
     print(''.join('{item:>4}'.format(item=x) for x in column_sum_list))
 
-def show_matrix_easy(matrix):
-    for i in range(len(matrix)):
-        print(matrix[i])
-
 def matrix_sort(array, column_sum_list):                                #Columns sort block
     for i in range(len(column_sum_list)):
         flag = True
@@ -19,8 +15,10 @@ def matrix_sort(array, column_sum_list):                                #Columns
                 column_sum_list[j], column_sum_list[j+1] = column_sum_list[j+1], column_sum_list[j]
                 for k in range(len(array)):
                     array[k][j], array[k][j + 1] = array[k][j + 1], array[k][j]
+                    
 
                 flag = False
+
         if flag:
             break
 
