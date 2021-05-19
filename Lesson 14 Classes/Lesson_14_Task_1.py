@@ -1,5 +1,5 @@
 # Lesson 14 Task 1
-
+#
 class Counter:
 
     def __init__(self, floor_border, ceiling_border):
