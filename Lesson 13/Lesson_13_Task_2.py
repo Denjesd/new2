@@ -4,7 +4,7 @@ file = open('13_2_file.txt', 'w')
 
 input_text = 0
 
-while input_text != '':
+while True:
     input_text = input('Enter the line: ')
     file.write(input_text + '\n')
 
