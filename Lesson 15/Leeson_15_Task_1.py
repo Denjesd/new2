@@ -10,11 +10,15 @@ class Group:
         for student in self.group_list:
             student.get_info()
 
+    def add_student_to_group(self, student):
+        self.group_list.append(student)
 
-    pass
+    def delete_student_from_group(self, student):
+        self.group_list.remove(student)
+
+
 class Student:
-    def __init__(self, group, name, surname, *grades):
-        group.group_list.append(self)
+    def __init__(self, name, surname, *grades):
         self.__name = name
         self.__surname = surname
         self.grades = list(grades)
@@ -33,9 +37,10 @@ class Student:
 
 
 group_A = Group('A')
-student_1 = Student(group_A, 'John', 'Smith', 1, 2, 3, 4)
-student_2 = Student(group_A, 'Albert', 'Smith', 1, 2, 3, 4)
-student_1.get_info()
-student_1.add_grade(5)
-student_1.get_info()
+student_1 = Student('John', 'Smith', 1, 2, 3, 4)
+student_2 = Student('Albert', 'Smith', 1, 2, 3, 4)
+group_A.add_student_to_group(student_1)
+group_A.add_student_to_group(student_2)
+group_A.show_group()
+group_A.delete_student_from_group(student_1)
 group_A.show_group()
